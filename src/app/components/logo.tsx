@@ -2,7 +2,12 @@
 
 import React from 'react'
 
-function Logo() {
+type logoProps = {
+  title : string;
+  isBold?: boolean;
+}
+
+function Logo({title, isBold}: logoProps) {
 
   const handleClickMe = ()=> {
     alert("Hello event")
@@ -10,9 +15,13 @@ function Logo() {
 
   return (
     <>
-        <h2>App Logo</h2>
+        {
+          isBold ? <p><strong>{title}</strong></p> : <p>{title}</p>
+        }
+
+        {/* <h3>App Logo</h3> */}
         {/* Events */}
-        <button onClick={handleClickMe}>Click Me</button>
+        {/* <button onClick={handleClickMe}>Click Me</button> */}
     </>
   )
 }
