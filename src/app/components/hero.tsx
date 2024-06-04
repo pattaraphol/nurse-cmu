@@ -36,7 +36,7 @@ function Hero() {
         <hr/>
 
         {/* Loop or Map */}
-        <h3>รายชื่อนักศึกษา</h3>
+        <h3 style={{backgroundColor: 'yellowgreen', textAlign:'center', padding:10}}>รายชื่อนักศึกษา</h3>
         {
             students.map((item, index) => {
                 return <div key={item.id}>{index + 1} {item.fullname} {item.age}</div>
