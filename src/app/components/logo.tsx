@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import styles from './logo.module.css'
 
 type logoProps = {
   title : string;
@@ -34,7 +35,7 @@ function Logo({title, isBold}: logoProps) {
 
   return (
     <>
-        <h3>{department}</h3>
+        <h3 className={styles.title}>{department}</h3>
         {
           isBold ? <p style={{ color:'blue', fontSize: 20}}><strong>{title}</strong></p> : <p>{title}</p>
         }
