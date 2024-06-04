@@ -1,10 +1,19 @@
+'use client'
+
 import React from 'react'
 
 function Logo() {
+
+  const handleClickMe = ()=> {
+    alert("Hello event")
+  }
+
   return (
-    <div>
-        <h2>Hello World 1234</h2>
-    </div>
+    <>
+        <h2>App Logo</h2>
+        {/* Events */}
+        <button onClick={handleClickMe}>Click Me</button>
+    </>
   )
 }
 
